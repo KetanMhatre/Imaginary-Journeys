@@ -95,7 +95,9 @@ body{
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    overflow-x: auto;
 }
+
 .section2-head{
     text-align: center;
     font-family: 'Mulish', sans-serif;
@@ -191,7 +193,6 @@ body{
     width: 100%;
     height: 100%;
     transition: all 0.8s ease-in-out;
-    z-index: -9;
 }
 
 
@@ -202,6 +203,13 @@ body{
     border-radius: 10px;
 }
 .slide-content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    height: 100%;
+    width: 30%;
+    background:linear-gradient(to right,rgba(0,0,0,1),rgba(0,0,0,.2));
     position: absolute;
     z-index: 9;
     bottom: 0;
@@ -220,6 +228,17 @@ body{
     color: white;
     font-weight: 400;
 }
+.content-btn{
+    margin-top: 20px;
+    font-size: 1rem;
+    background:yellow;
+    color:black;
+    border: none;
+    width: 140px;
+    height: 35px;
+    border-radius: 5px;
+    font-weight: bolder;
+}
 .slider-btn{
     margin-top: 2rem;
     font-size: 3rem;  
@@ -228,7 +247,8 @@ body{
    height: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: center;   
+    align-items: center;  
+    z-index: 9; 
 }
 .prev-btn:hover,.next-btn:hover{
     color: #ffff;
@@ -241,13 +261,34 @@ body{
     padding-right: 2rem;
 }
 
+
 .section-4{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
     padding-top:5rem;
-    height: 50vh;
-    width: 100%;
-   
+    height: 80vh;
+    overflow: hidden;
+    text-align: center;
+}
+.section-4>h3{
+    font-size: 2rem;
+}
+.sec4-container{
+  display: flex;
+  flex-wrap: wrap;
+ justify-content: center;
+    grid-template-columns: repeat(3,1fr);
+}
+.header-img{
+   font-size: 2.5rem;
+}
+.sec-item{
+    width: 500px;
+    height: 250px;
+    padding: 3rem;
+    background: rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+   margin: 10px;
+   border-radius: 10px;
+}
+.sec-content{
+    margin-top: 1.5rem;
 }
